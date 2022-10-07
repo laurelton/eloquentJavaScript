@@ -1,13 +1,7 @@
 const countChar = (str, query) => {
-    let count = 0;
-
-    for (let char of str) {
-        if (char === query) {
-            count += 1;
-        }
-    }
-
-    return count;
+    return [...str].reduce((count, char) => {
+        return char === query ? count + 1 : count;
+    }, 0);
 };
 
 const countBs = (str) => {
