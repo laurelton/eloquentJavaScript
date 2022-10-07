@@ -17,16 +17,29 @@ class Group {
         this.values = [];
     }
 
+    /**
+     * Is the value a member of this group
+     * @param {number} val
+     * @returns {boolean}
+     */
     has(val) {
         return this.values.includes(val);
     }
 
+    /**
+     * Add the value to this group
+     * @param {number} val
+     */
     add(val) {
         if (!this.has(val)) {
             this.values.push(val);
         }
     }
 
+    /**
+     * Delete the value from this group
+     * @param {number} val
+     */
     delete(val) {
         if (this.has(val)) {
             const indx = this.values.indexOf(val);
@@ -34,6 +47,11 @@ class Group {
         }
     }
 
+    /**
+     * Create a group containing the iterable values
+     * @param {*} iter Any iterable object
+     * @returns {Group}
+     */
     static from(iter) {
         const grp = new Group();
         for (const val of iter) {
