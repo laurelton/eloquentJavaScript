@@ -118,6 +118,7 @@ const main = () => {
     console.log(nth(arrayToList([10, 20, 30]), 1));
     // → 20
     console.log(nth(arrayToListRRP([44, 88, 101]), 3));
+    // → undefined
 };
 
 main();
