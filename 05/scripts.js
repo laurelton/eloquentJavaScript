@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 // Generated from the Unicode 10 database and https://en.wikipedia.org/wiki/Script_(Unicode)
 
 var SCRIPTS = [
@@ -1117,7 +1118,9 @@ var SCRIPTS = [
 
 // This makes sure the data is exported in node.js —
 // `require('./path/to/scripts.js')` will get you the array.
-if (typeof module != "undefined" && module.exports && (typeof window == "undefined" || window.exports != exports))
+if (typeof module !== "undefined" && module.exports && (typeof window === "undefined" || window.exports !== exports)){
   module.exports = SCRIPTS;
-if (typeof global != "undefined" && !global.SCRIPTS)
+}
+if (typeof global !== "undefined" && !global.SCRIPTS) {
   global.SCRIPTS = SCRIPTS;
+}
